@@ -1,0 +1,22 @@
+{
+  "name": "firstmac",
+  "version": "1.0.0",
+  "description": "FirstMac Examination",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitJoseph03/firstMac.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gitJoseph03/firstMac/issues"
+  },
+  "homepage": "https://github.com/gitJoseph03/firstMac#readme",
+  "devDependencies": {
+    "cypress": "^13.4.0"
+  }
+}
