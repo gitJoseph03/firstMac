@@ -16,7 +16,10 @@ export class Home {
             })
         }
         cy.wrap(products).then((_products) => {
-          cy.writeFile('cypress/fixtures/products.json', { _products })
+          cy.readFile('cypress/fixtures/testData.json').then((data) => {
+            data.products = _products
+            cy.writeFile('cypress/fixtures/testData.json', JSON.stringify(data))
+          })
         })
       })
   }
