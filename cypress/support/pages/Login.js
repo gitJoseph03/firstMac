@@ -1,9 +1,11 @@
+import { element } from '../elementLocator'
+
 export class Login {
   login = (username, password) => {
-    cy.get('#user-name').should('be.visible').type(username)
-    cy.get('#password').should('be.visible').type(password)
-    cy.get('#login-button').should('be.visible').click()
+    cy.get(element.login.username).should('be.visible').type(username)
+    cy.get(element.login.password).should('be.visible').type(password)
+    cy.get(element.login.submit).should('be.visible').click()
     // validate login if success
-    cy.get('span[class="title"]').contains('Products').should('be.visible')
+    cy.get(element.home.header).contains('Products').should('be.visible')
   }
 }

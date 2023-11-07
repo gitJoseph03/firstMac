@@ -1,11 +1,12 @@
+import { element } from '../elementLocator'
 export class Cart {
   goToCart = () => {
-    cy.get('.shopping_cart_link').should('be.visible').click()
+    cy.get(element.product.shoppingCart).should('be.visible').click()
     // verify if the user is redirected to cart
-    cy.get('span[class="title"]').contains('Your Cart').should('be.visible')
+    cy.get(element.home.header).contains('Your Cart').should('be.visible')
   }
   getProductName = (args = { expectedProductName }) => {
-    cy.get('.inventory_item_name')
+    cy.get(element.cart.productName)
       .should('be.visible')
       .invoke('text')
       .then((data) => {
