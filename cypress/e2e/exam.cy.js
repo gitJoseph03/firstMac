@@ -24,7 +24,7 @@ describe('Technical Examination', () => {
     home.getAllProducts()
   })
   it('get the collected products and select the 3rd product', function () {
-    cy.fixture(testData).then((data) => {
+    cy.readFile(`cypress/fixtures/${testData}`).then((data) => {
       home.selectProduct(data.products[2])
     })
   })
@@ -40,7 +40,7 @@ describe('Technical Examination', () => {
     cart.goToCart()
   })
   it('verify if the added product name is correct', function () {
-    cy.fixture(testData).then((data) => {
+    cy.readFile(`cypress/fixtures/${testData}`).then((data) => {
       cart.getProductName({ expectedProductName: data.products[2] })
     })
   })
