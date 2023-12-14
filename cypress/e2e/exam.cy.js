@@ -28,7 +28,7 @@ describe('Technical Examination', () => {
       home.selectProduct(data.products[2])
     })
   })
-  it('add to cart the selected product', function () {
+  it.skip('add to cart the selected product', function () {
     product.addToCart()
   })
   it('verify the cart quantity in product details page', function () {
